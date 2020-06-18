@@ -1,0 +1,27 @@
+<%- include('partials/header') -%> 
+    <div class="container">
+        <div class="content">
+            <h2>Log in</h2>
+            <div class="message-area">
+                <%= message %> 
+            </div>
+            <form action="/auth" method="POST">
+                <div class="username-container">
+                    <label for="username"><i class="fas fa-user-alt"></i></label>
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <div class="password-container" >
+                    <label for="password"><i class="fas fa-lock"></i></label>
+                    <input type="password" name="password" placeholder="Password" id="password">
+                    <input id="show-checkbox" type="checkbox" onclick="showPassword()">
+                </div>
+                <div class="submit-container">
+                    <input id="login" type="submit" value="Submit">
+                </div>
+                <div class="link-container" >
+                    Not a member ?
+                    <a href="/signup">Sign up now</a>
+                </div>
+            </form >
+        </div>
+    </div>
